@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Películas</title>
+</head>
+<body>
+  <h1>Listado de películas</h1>
+  <ul id="peliculas"></ul>
+  <script defer src="peliculas.js"></script>
+  <!-- no borrar antes xdxdxd -->
+  <form method="POST" action="/peliculas/agregar" id="add-movie-form">
+  <div>
+    <label for="titulo">Título:</label>
+    <input type="text" id="title-input" name="titulo" required>
+  </div>
+  <div>
+    <label for="director">Director:</label>
+    <input type="text" id="director-input" name="director" required>
+  </div>
+  <div>
+    <label for="anio">Año:</label>
+    <input type="number" id="year-input" name="anio" min="1900" max="2099" required>
+  </div>
+  <button type="submit">Agregar película</button>
+</form>
+
+<style>
+  /* Estilos para el cuerpo de la página */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Estilos para el encabezado */
+h1 {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Estilos para la lista de películas */
+ul#peliculas {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+ul#peliculas li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el formulario */
+form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+form button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #444;
+}
+
+</style>
+
+ </body>
+</html>

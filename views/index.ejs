@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Películas</title>
+</head>
+<body>
+  <h1>Películas</h1>
+  <ul>
+    <% peliculas.forEach((pelicula) => { %>
+      <li><%= pelicula.titulo %> (<%= pelicula.año %>)</li>
+    <% }) %>
+  </ul>
+</body>
+</html>
